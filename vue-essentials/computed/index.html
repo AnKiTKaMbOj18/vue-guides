@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <span>
+      change the text
+      <input v-model="text" placeholder="type text">
+    </span>
+    <p>Lowercased: {{lowerText}}</p>
+  </div>
+  <script>
+
+    var app =  new Vue({
+      el: "#app",
+      data: {
+        text: '',
+
+      },
+      methods: {
+      },
+      components: {
+      },
+      computed: {
+        lowerText() {
+          return this.text.toLowerCase()
+        }
+      }
+    })
+  </script>
+</body>
+</html>
