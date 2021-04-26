@@ -25,6 +25,8 @@ const router =  new VueRouter({
   ]
 });
 
+console.log(process.env.VUE_APP_API_KEY)
+
 firebaseApp.auth().onAuthStateChanged(user => {
   if(user) {
     store.dispatch('signIn', user);
